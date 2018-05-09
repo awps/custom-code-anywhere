@@ -1,0 +1,147 @@
+/*Backend CSS*/
+@import "__lesshat.less";
+
+.tci-connect{
+	.display( flex );
+	min-height: 70vh;
+	padding-right: 20px;
+	padding-top: 15px;
+	.box-sizing( border-box );
+
+	[class*="tci-panel"]{
+		padding: 30px;
+		.box-sizing( border-box );
+	}
+
+	.tci-panel-left {
+		.flex-basis( 40% );
+		max-width: 40%;
+		padding: 0 30px 0 0;
+	}
+
+	.tci-panel-right {
+		.flex-basis( 60% );
+		max-width: 60%;
+		background: #fefefe;
+		border-radius: 5px;
+	}
+
+	[class*="tci-field"]{
+		padding: 10px 0;
+		.title{
+			font-weight: 700;
+			margin: 0 0 7px;
+			padding: 0;
+		}
+
+		&:first-of-type{
+			padding-top: 0;
+		}
+	}
+	
+	.tci-field-position_in_html{
+		label{
+			display: inline-block;
+			padding-right: 15px;
+		}
+	}
+
+	textarea{
+		width: 100%;
+		height: 35vh;
+	}
+
+	input[type="text"] {
+		width: 100%;
+	}
+
+	.tci-submit{
+		> .button,
+		> .spinner,
+		> .cancel-edit {
+			float: left;
+		}
+		> .cancel-edit {
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
+			border-radius: 3px;
+		}
+		> .tc-delete {
+			float: right;
+			color: red;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-radius: 3px;
+			&:hover{
+				background: red;
+				color: #fff;
+			}
+		}
+	}
+
+	// ----------------------------------------------------------------------------
+	// Items
+	// ----------------------------------------------------------------------------
+	.tc-single-item{
+		display: block;
+		background: #fefefe;
+		padding: 15px 10px;
+		margin: 0 0 7px;
+		border-radius: 3px;
+		cursor: pointer;
+		border: 1px solid transparent;
+
+		.tc-show-label{
+			font-weight: 700;
+			display: inline-block;
+			float: left;
+			padding: 4px 0;
+
+			> span{
+				font-weight: 400;
+				display: inline-block;
+				color: #888;
+				font-style: italic;
+				padding-left: 5px;
+			}
+		}
+		.tc-label,
+		.tc-code,
+		.tc-position_in_html,
+		.tc-priority {
+			display: none;
+		}
+
+		.tc-edit-item{
+			float: right;
+			display: inline-block;
+			padding: 4px 12px;
+			border-radius: inherit;
+			background: #97CE68;
+			visibility: hidden;
+			opacity: 0;
+			color: #fff;
+			font-size: 12px;
+			.transition( all 0.15s );
+
+		}
+
+		&.active{
+			border-color: #97CE68;
+		}
+
+		&:hover,
+		&.active{
+			.tc-edit-item{
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.tc-hidden {
+	display: none!important;
+}
