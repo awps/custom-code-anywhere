@@ -1,7 +1,7 @@
-;(function( $ ) {
+;(function ($) {
 
-	"use strict";
+    "use strict";
 
-	// Javascript code here
+    // Javascript code here
 
 })(jQuery);
