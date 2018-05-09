@@ -25,10 +25,10 @@ class Manage
         /* Merge with defaults
         ------------------------------*/
         $s = wp_parse_args($s, [
-            'deps' => [],
-            'ver' => $this->version,
-            'media' => 'all',
-            'enqueue' => true,
+            'deps'             => [],
+            'ver'              => $this->version,
+            'media'            => 'all',
+            'enqueue'          => true,
             'enqueue_callback' => false,
         ]);
 
@@ -57,10 +57,10 @@ class Manage
         ----------------*/
         // Merge with defaults
         $s = wp_parse_args($s, [
-            'deps' => ['jquery'],
-            'ver' => $this->version,
-            'in_footer' => true,
-            'enqueue' => true,
+            'deps'             => ['jquery'],
+            'ver'              => $this->version,
+            'in_footer'        => true,
+            'enqueue'          => true,
             'enqueue_callback' => false,
         ]);
 

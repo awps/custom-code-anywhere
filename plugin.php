@@ -255,7 +255,7 @@ final class TC_INSTALLER_Plugin
     /**
      * Get assets url.
      *
-     * @param string $file Optionally specify a file name
+     * @param string|bool $file Optionally specify a file name
      *
      * @return string
      */

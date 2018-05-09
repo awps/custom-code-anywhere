@@ -27,30 +27,30 @@ function tc_installer_config($key = false)
     $settings = apply_filters('tc_installer:config_args', [
 
         // Plugin data
-        'version' => '1.0',
-        'min_php_version' => '5.3',
+        'version'          => '1.0',
+        'min_php_version'  => '5.3',
 
         // The list of required plugins. 'plugin_slug' => array( 'plugin_name' => '', 'plugin_uri' => '' )
         // Example: 'example-plugin' => array( 'plugin_name' => 'Example Plug-in', 'plugin_uri' => 'http://example.com/' ),
         'required_plugins' => [],
 
         // The priority in plugins loaded. Only if has required plugins
-        'priority' => 10,
+        'priority'         => 10,
 
         // Plugin branding
-        'plugin_name' => __('Tracking Code Installer', 'tracking-code-installer'),
-        'id' => 'tracking-code-installer',
-        'namespace' => 'TrackingCodeInstaller',
+        'plugin_name'      => __('Tracking Code Installer', 'tracking-code-installer'),
+        'id'               => 'tracking-code-installer',
+        'namespace'        => 'TrackingCodeInstaller',
         'uppercase_prefix' => 'TC_INSTALLER',
         'lowercase_prefix' => 'tc_installer',
 
         // Access to plugin directory
-        'file' => __FILE__,
-        'lang_path' => plugin_dir_path(__FILE__) . 'languages',
-        'basename' => plugin_basename(__FILE__),
-        'path' => plugin_dir_path(__FILE__),
-        'url' => plugin_dir_url(__FILE__),
-        'uri' => plugin_dir_url(__FILE__),
+        'file'             => __FILE__,
+        'lang_path'        => plugin_dir_path(__FILE__) . 'languages',
+        'basename'         => plugin_basename(__FILE__),
+        'path'             => plugin_dir_path(__FILE__),
+        'url'              => plugin_dir_url(__FILE__),
+        'uri'              => plugin_dir_url(__FILE__),
         //Alias
 
     ]);

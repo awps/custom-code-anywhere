@@ -90,10 +90,10 @@ class Config
                         // Return some info back to browser
                         die(json_encode(
                             [
-                                'id' => $id,
+                                'id'     => $id,
                                 'status' => 'success',
-                                'msg' => __('A new code has been added successfuly.', 'tracking-code-installer'),
-                                'html' => $this->_singleItemFromList($id, $data),
+                                'msg'    => __('A new code has been added successfuly.', 'tracking-code-installer'),
+                                'html'   => $this->_singleItemFromList($id, $data),
                             ]
                         ));
                     }
@@ -111,7 +111,7 @@ class Config
                         die(json_encode(
                             [
                                 'is_delete' => 1,
-                                'status' => 'success',
+                                'status'    => 'success',
                             ]
                         ));
                     }
@@ -122,7 +122,7 @@ class Config
         die(json_encode(
             [
                 'status' => 'fail',
-                'msg' => __('Could not save data. Try again.', 'tracking-code-installer'),
+                'msg'    => __('Could not save data. Try again.', 'tracking-code-installer'),
             ]
         ));
     }
@@ -181,10 +181,10 @@ class Config
     protected function _singleItemFromList($opt_id, $value)
     {
         $value = wp_parse_args($value, [
-            'code' => '',
-            'label' => '',
+            'code'             => '',
+            'label'            => '',
             'position_in_html' => '',
-            'priority' => '',
+            'priority'         => '',
         ]);
 
         return sprintf(
